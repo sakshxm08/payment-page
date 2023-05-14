@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&family=Inter&family=Poppins:wght@400;500&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poiret+One&display=swap");
+    </style>
+    <script
+      src="https://kit.fontawesome.com/dffffa55e9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <div class="payment">
+          <h1>Payment details</h1>
+          <form action="#" autocomplete="off">
+            <div>
+              <label for="number1">Card Number</label>
+              <div class="number-input">
+                <input type="number" maxlength="4" id="number1" required />
+                <input type="number" maxlength="4" id="number2" required />
+                <input type="number" maxlength="4" id="number3" required />
+                <input type="number" maxlength="4" id="number4" required />
+              </div>
+            </div>
+            <div>
+              <label for="name">Name on Card</label>
+              <input type="text" id="name" required />
+            </div>
+
+            <div class="smallInp">
+              <div>
+                <label for="expiry">Expiry Date</label>
+                <!-- <input type="number" id="expiry" maxlength="3" /> -->
+                <div>
+                  <div class="select">
+                    <select id="card-expiration-month" required>
+                      <option></option>
+                      <option>01</option>
+                      <option>02</option>
+                      <option>03</option>
+                      <option>04</option>
+                      <option>05</option>
+                      <option>06</option>
+                      <option>07</option>
+                      <option>08</option>
+                      <option>09</option>
+                      <option>10</option>
+                      <option>11</option>
+                      <option>12</option>
+                    </select>
+                  </div>
+                  <div class="select">
+                    <select id="card-expiration-year" required>
+                      <option></option>
+                      <option>2022</option>
+                      <option>2023</option>
+                      <option>2024</option>
+                      <option>2025</option>
+                      <option>2026</option>
+                      <option>2027</option>
+                      <option>2028</option>
+                      <option>2029</option>
+                      <option>2030</option>
+                      <option>2031</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <label for="cvv">CVV</label>
+                <input type="password" maxlength="3" id="cvv" required />
+              </div>
+            </div>
+            <!-- <div class="checkbox">
+              <input type="checkbox" id="promoCheck" />
+              <label for="promoCheck">I've a promo code</label>
+            </div>
+            <div class="hide" id="promoInput">
+              <label for="promo">Enter Promo Code</label
+              ><input type="text" id="promo" />
+            </div> -->
+            <button id="submit">Make Payment</button>
+          </form>
+        </div>
+        <div class="sidebar">
+          <div class="card">
+            <div class="card-inner" id="card-flip">
+              <div class="front">
+                <div class="logo-bar logo">
+                  <div class="chip">
+                    <img src="./content/chip.png" alt="" />
+                  </div>
+                  <div class="visa">
+                    <img src="./content/visa.png" alt="" />
+                  </div>
+                </div>
+                <div class="card-number">
+                  <span id="cardNumber1"></span><span id="cardNumber2"></span
+                  ><span id="cardNumber3"></span><span id="cardNumber4"></span>
+                </div>
+                <div class="card-details">
+                  <div>
+                    <span>CARD HOLDER</span><span id="holderName"></span>
+                  </div>
+                  <div>
+                    <span>EXPIRES</span
+                    ><span id="expiryDate"
+                      ><span id="month"></span><span id="year"></span
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div class="back">
+                <div class="black-bar"></div>
+                <div class="cvv-bar">
+                  <div>CVV</div>
+                  <div>
+                    <div class="hidden">
+                      <span></span><span></span><span></span><span></span
+                      ><span></span><span></span><span></span><span></span>
+                      <span></span><span></span><span></span><span></span
+                      ><span></span><span></span><span></span><span></span
+                      ><span></span><span></span><span></span><span></span
+                      ><span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="cvv" id="cardCvv"></div>
+                  </div>
+                </div>
+                <div class="back-logo logo">
+                  <img src="./content/visa.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <span class="footerText">
+        Handcrafted by
+        <a href="https://sakshxm08.netlify.app/" target="_blank">@sakshxm08</a>
+        with &hearts; &#169;twentytwentythree</span
+      >
+      <div class="social">
+        <a href="https://www.linkedin.com/in/sakshxm08/"
+          ><i class="fa-brands fa-linkedin linked socialIcon"></i></a
+        ><a href="https://github.com/sakshxm08"
+          ><i class="fa-brands fa-github github socialIcon"></i
+        ></a>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
