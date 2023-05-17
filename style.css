@@ -16,7 +16,7 @@
     1.8px 2.1px 5.3px rgba(0, 0, 0, 0.028), 3.4px 4px 10px rgba(0, 0, 0, 0.035),
     6px 7.1px 17.9px rgba(0, 0, 0, 0.042),
     11.3px 13.4px 33.4px rgba(0, 0, 0, 0.05), 27px 32px 80px rgba(0, 0, 0, 0.07);
-  width: 70%;
+  width: 90%;
   padding: 20px;
   margin: auto;
   height: max-content;
@@ -191,10 +191,11 @@ form button:hover {
 }
 .card-number {
   display: grid;
-  align-items: center;
+  place-items: center;
+
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
-  font-size: 28px;
+  font-size: calc(16px + 1.2vmax);
   overflow: hidden;
 }
 .card-details {
@@ -213,11 +214,11 @@ form button:hover {
   align-items: flex-end;
 }
 .card-details div > span:first-child {
-  font-size: 12px;
+  font-size: calc(1px + 0.8vmax);
   color: #ccc;
 }
 .card-details div > span:last-child {
-  font-size: 20px;
+  font-size: calc(12px + 0.8vmax);
 }
 .back {
   display: flex;
@@ -322,4 +323,114 @@ form button:hover {
 }
 .footer .github:hover {
   color: #171515;
+}
+@media screen and (max-width: 1200px) {
+  .card {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .main {
+    flex-direction: column-reverse;
+    gap: 30px;
+    width: 60%;
+    margin: 180px auto 80px;
+  }
+  .container {
+    height: max-content;
+  }
+  .payment {
+    width: 100%;
+    padding: 20px;
+  }
+  .sidebar {
+    width: 80%;
+    align-self: center;
+    margin-top: -150px;
+    background: rgb(212, 216, 222);
+  }
+
+  .card {
+    margin: 20px auto;
+  }
+}
+@media screen and (max-width: 850px) {
+  .sidebar {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .main {
+    width: 80%;
+  }
+  .footer span {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .main {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 468px) {
+  .sidebar {
+    width: 95%;
+  }
+  .card {
+    width: 95%;
+    margin: 10px auto;
+  }
+  .card-number {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .card-number {
+    font-size: 24px;
+  }
+  .smallInp {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .main {
+    padding: 10px;
+  }
+  .card {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .sidebar {
+    margin-top: -100px;
+  }
+  .number-input {
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
+@media screen and (max-width: 340px) {
+  .card-number {
+    font-size: 20px;
+  }
+  .card-details div > span:last-child {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .sidebar {
+    width: 98%;
+  }
+  .main {
+    padding: 4px;
+  }
+}
+@media screen and (max-height: 700px) {
+  .container {
+    height: max-content;
+  }
+  .main {
+    margin: 40px auto;
+  }
 }
